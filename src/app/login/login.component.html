@@ -1,0 +1,91 @@
+<div class="grid">
+  <div class="col-12 md:col-6 lg:col-6">
+
+
+    <img class="hero-image" src="/assets/img/builderCrange.png" alt="Photo Seafty Checks and Builder">
+
+  </div>
+  <div class="col-12 md:col-6 lg:col-6 align-content-center">
+
+
+    <mat-card class="flex-column justify-content-center my-6">
+
+      <form [formGroup]="loginForm" >
+        <mat-form-field appearance="outline">
+          <mat-label> First name </mat-label>
+          <input matInput placeholder="First name" formControlName="firstName" required>
+          <mat-error *ngIf="loginForm.controls['firstName'].hasError('required')">
+            First name is <strong>required</strong>
+          </mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label> Last Name </mat-label>
+          <input matInput placeholder="Last Name" formControlName="lastName" required>
+          <mat-error *ngIf="loginForm.controls['lastName'].hasError('required')">
+            Last Name is <strong>required</strong>
+          </mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label> Email </mat-label>
+          <input matInput placeholder="Email" formControlName="email" required>
+          <mat-error *ngIf="loginForm.controls['email'].hasError('required')">
+            Email is <strong>required</strong>
+          </mat-error>
+
+
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label> Password </mat-label>
+          <input matInput placeholder="Password" formControlName="password" required>
+          <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+          <mat-error *ngIf="loginForm.controls['password'].hasError('required')">
+            Password is <strong>required</strong>
+          </mat-error>
+        </mat-form-field>
+
+      </form>
+
+      <button mat-raised-button color="primary">Login</button>
+
+      <mat-card-actions class="mt-5">
+        <h2 class="mat-title">Create account with</h2>
+
+        <div class=" flex justify-content-start">
+          <button mat-mini-fab color="primary" aria-label="icon button">
+          <i class='bx bxl-google bx-md'></i>
+        </button>
+
+        <button mat-mini-fab color="primary" aria-label="icon button">
+          <i class='bx bxl-facebook-circle bx-md'></i>
+        </button>
+
+        <button mat-mini-fab color="primary" aria-label="icon button">
+          <i class='bx bxl-microsoft bx-md'></i>
+        </button>
+        </div>
+        
+      </mat-card-actions>
+
+    </mat-card>
+  
+
+  </div>
+</div>
+
+
+<!-- <main>
+  <section class="intro">
+    <h1 class="intro__title">
+      Learn English
+    </h1>
+    <p class="intro__subtitle">
+      Visiting places in the world, getting a new job, or just looking for a way to practice your English - this is
+      the perfect place for you.
+    </p>
+    <a href="#" class="button">Get Started</a>
+    <img class="intro__illustration" src="/assets/img/builderCrange.png" alt="" />
+  </section>
+</main> -->
