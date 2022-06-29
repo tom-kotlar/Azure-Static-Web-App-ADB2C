@@ -1,4 +1,12 @@
-# Login
+# Login 
+
+## Resources static-webapp-login:
+
+ 
+
+-  ### [Static Web App](https://ashy-beach-0122fe903.1.azurestaticapps.net)
+
+- ### [Devops Repo](https://dev.azure.com/redOpalAzure/Playground/_git/static-webapp-login)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.0.0.
 
