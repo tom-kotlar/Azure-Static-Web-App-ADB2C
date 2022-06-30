@@ -8,6 +8,13 @@
 
 - ### [Devops Repo](https://dev.azure.com/redOpalAzure/Playground/_git/static-webapp-login)
 
+## SWA Docs:
+
+- ### [SWA CLI](https://azure.github.io/static-web-apps-cli/)
+
+- ### [ Authenticate users with Azure Static Web Apps](https://docs.microsoft.com/en-us/learn/paths/azure-static-web-apps/)
+
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.0.0.
 
 ## Development server

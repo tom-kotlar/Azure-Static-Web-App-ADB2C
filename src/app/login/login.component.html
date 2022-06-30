@@ -66,6 +66,8 @@
           <i class='bx bxl-microsoft bx-md'></i>
         </button>
         </div>
+
+
         
       </mat-card-actions>
 
@@ -74,6 +76,12 @@
 
   </div>
 </div>
+
+
+<a href="/.auth/login/github">Login</a>
+<a href="/.auth/login/github?post_login_redirect_uri=/home">Login</a>
+
+<a href="/.auth/logout">Log out</a>
 
 
 <!-- <main>
@@ -89,3 +97,25 @@
     <img class="intro__illustration" src="/assets/img/builderCrange.png" alt="" />
   </section>
 </main> -->
+
+
+
+<nav class="menu auth">
+  <p class="menu-label">Auth</p>
+  <div class="menu-list auth">
+    <ng-container *ngIf="!userInfo; else logout">
+      <ng-container *ngFor="let provider of providers">
+        <a href="/.auth/login/{{provider}}?post_login_redirect_uri={{redirect}}">{{provider}}</a>
+      </ng-container>
+    </ng-container>
+    <ng-template #logout>
+      <a href="/.auth/logout?post_logout_redirect_uri={{redirect}}">Logout</a>
+    </ng-template>
+  </div>
+</nav>
+
+<div class="user" *ngIf="userInfo">
+  <p>Welcome</p>
+  <p>{{ userInfo?.userDetails }}</p>
+  <p>{{ userInfo?.identityProvider }}</p>
+</div>

@@ -1,14 +1,21 @@
 {
+    "routes": [
+        {
+            "route": "",
+            "redirect": "/login",
+            "statusCode": 301
+        }, 
+        {
+            "route": "/home",
+            "allowedRoles": ["authenticated"]
+        },
+        {
+            "route": "/.auth/login/github",
+            "statusCode": 200
+        }
+    ],
     "navigationFallback": {
       "rewrite": "/index.html",
       "exclude": ["*.{css,scss,js,png,gif,ico,jpg,svg}"]
-    }, 
-
-    "routes": [
-        {
-          "route": "",
-          "redirect": "/login",
-          "statusCode": 301
-        }
-      ]
+    }
   }
