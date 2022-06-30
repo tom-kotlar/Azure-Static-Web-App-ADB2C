@@ -5,9 +5,15 @@
             "redirect": "/login",
             "statusCode": 301
         }, 
+
         {
             "route": "/home",
             "allowedRoles": ["authenticated"]
+        }, 
+        {
+            "route": "/.auth/login/done",
+            "redirect": "/home",
+            "statusCode": 301
         }
     ],
     "navigationFallback": {
@@ -15,3 +21,5 @@
       "exclude": ["*.{css,scss,js,png,gif,ico,jpg,svg}"]
     }
   }
+
+ 
