@@ -10,7 +10,7 @@
 
     <mat-card class="flex-column justify-content-center my-6">
 
-      <form [formGroup]="loginForm" >
+      <form [formGroup]="loginForm">
         <mat-form-field appearance="outline">
           <mat-label> First name </mat-label>
           <input matInput placeholder="First name" formControlName="firstName" required>
@@ -53,69 +53,42 @@
       <mat-card-actions class="mt-5">
         <h2 class="mat-title">Create account with</h2>
 
-        <div class=" flex justify-content-start">
-          <button mat-mini-fab color="primary" aria-label="icon button">
-          <i class='bx bxl-google bx-md'></i>
-        </button>
+        <ng-container *ngIf="!userInfo; else logout">
+          <ng-container *ngFor="let provider of providers">
+            <a mat-icon-button color="warn" aria-label="icon button"
+              href="/.auth/login/{{provider.provider}}?post_login_redirect_uri=/home">
+              <i class={{provider.icon}}></i>
+            </a>
+          </ng-container>
+        </ng-container>
+        <ng-template #logout>
+          <a mat-raised-button color="primary" href="/.auth/logout?post_logout_redirect_uri=/login">Logout</a>
+        </ng-template>
 
-        <button mat-mini-fab color="primary" aria-label="icon button">
-          <i class='bx bxl-facebook-circle bx-md'></i>
-        </button>
-
-        <button mat-mini-fab color="primary" aria-label="icon button">
-          <i class='bx bxl-microsoft bx-md'></i>
-        </button>
-        </div>
-
-
-        
       </mat-card-actions>
 
     </mat-card>
-  
+
 
   </div>
 </div>
 
 
-<a href="/.auth/login/github">Login</a>
-<a href="/.auth/login/github?post_login_redirect_uri=/home">Login</a>
-
-<a href="/.auth/logout">Log out</a>
 
 
-<!-- <main>
-  <section class="intro">
-    <h1 class="intro__title">
-      Learn English
-    </h1>
-    <p class="intro__subtitle">
-      Visiting places in the world, getting a new job, or just looking for a way to practice your English - this is
-      the perfect place for you.
-    </p>
-    <a href="#" class="button">Get Started</a>
-    <img class="intro__illustration" src="/assets/img/builderCrange.png" alt="" />
-  </section>
-</main> -->
-
-
-
-<nav class="menu auth">
+<!-- <nav class="menu auth">
   <p class="menu-label">Auth</p>
   <div class="menu-list auth">
     <ng-container *ngIf="!userInfo; else logout">
       <ng-container *ngFor="let provider of providers">
-        <a href="/.auth/login/{{provider}}?post_login_redirect_uri=/home">{{provider}}</a>
+        <a mat-icon-button color="warn" aria-label="icon button" href="/.auth/login/{{provider.provider}}?post_login_redirect_uri=/home">
+          <i class={{provider.icon}}></i>
+        </a>
+
       </ng-container>
     </ng-container>
     <ng-template #logout>
       <a href="/.auth/logout?post_logout_redirect_uri=/login">Logout</a>
     </ng-template>
   </div>
-</nav>
-
-<div class="user" *ngIf="userInfo">
-  <p>Welcome</p>
-  <p>{{ userInfo?.userDetails }}</p>
-  <p>{{ userInfo?.identityProvider }}</p>
-</div>
+</nav> -->

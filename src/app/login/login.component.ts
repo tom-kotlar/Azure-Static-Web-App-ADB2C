@@ -1,13 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {FormBuilder, Validators, FormControl, FormGroup} from '@angular/forms';
-
-export interface UserInfo {
-  identityProvider: string;
-  userId: string;
-  userDetails: string;
-  userRoles: string[];
-}
-
+import { FormBuilder, Validators, FormControl, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-login',
@@ -16,37 +8,23 @@ export interface UserInfo {
 })
 export class LoginComponent implements OnInit {
 
-   
+  providers = [
+    { provider: 'google', icon: 'bx bxl-google  bx-md', name: "Google" },
+    { provider: 'twitter', icon: 'bx bxl-twitter bx-md', name: "Twitter" },
+    { provider: 'facebook', icon: 'bx bxl-facebook-circle  bx-md', name: "Facebook" },
+    { provider: 'aad', icon: 'bx bxl-microsoft  bx-md', name: "Microsoft" },
+  ];
+  redirect = window.location.pathname;
 
-   userInfo: UserInfo | undefined;
-   providers = ['twitter', 'github', 'aad'];
-   redirect = window.location.pathname;
-
-   loginForm = this.fb.group({
+  loginForm = this.fb.group({
     firstName: [null, Validators.required],
     lastName: [null, Validators.required],
     email: [null, Validators.required, Validators.email],
     password: [null, Validators.required],
   });
 
-  constructor(private fb: FormBuilder ) { }
+  constructor(private fb: FormBuilder) { }
 
-  async ngOnInit() {
-    this.userInfo = await this.getUserInfo();
-  }
-
-
-  async getUserInfo() {
-    try {
-      const response = await fetch('/.auth/me');
-      const payload = await response.json();
-      const { clientPrincipal } = payload;
-      console.log(clientPrincipal, "<<<")
-      return clientPrincipal;
-    } catch (error) {
-      console.error('No profile could be found');
-      return undefined;
-    }
-  }
+  ngOnInit() { }
 
 }
