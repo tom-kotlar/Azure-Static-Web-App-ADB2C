@@ -13,6 +13,7 @@
         {
             "route": "/.auth/login/done",
             "redirect": "/home",
+            "allowedRoles": ["authenticated"],
             "statusCode": 301
         }
     ],
