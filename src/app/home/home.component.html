@@ -1,2 +1,8 @@
-<p>home works!</p>
-<a href="/.auth/logout?post_logout_redirect_uri=/login">Log out</a>
+<div class="" *ngIf="userInfo">
+    <h1>Welcome</h1>
+    <h3>User Info: {{ userInfo?.userDetails }}</h3>
+    <h3>Provider: {{ userInfo?.identityProvider }}</h3>
+    <p></p>
+</div>
+
+<a mat-raised-button color="primary" href="/.auth/logout?post_logout_redirect_uri=/login">Logout</a>
