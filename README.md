@@ -15,6 +15,33 @@
 - ### [ Authenticate users with Azure Static Web Apps](https://docs.microsoft.com/en-us/learn/paths/azure-static-web-apps/)
 
 
+## AD B2C Docs:
+
+ - ### [Microsoft Authentication Library for Angular](https://www.npmjs.com/package/@azure/msal-angular)
+- ### [Microsoft Authentication Library for JavaScript (MSAL.js) 2.0 for Browser-Based Single-Page Applications](https://www.npmjs.com/package/@azure/msal-browser)
+
+- ### [Azure Active Directory B2C](https://docs.microsoft.com/en-us/azure/active-directory-b2c/)
+
+https://docs.microsoft.com/en-us/azure/active-directory-b2c/integrate-with-app-code-samples#single-page-apps
+
+https://github.com/Azure-Samples/ms-identity-javascript-angular-tutorial/blob/main/1-Authentication/2-sign-in-b2c/README-incremental.md
+
+https://github.com/AzureAD/microsoft-authentication-library-for-js/tree/dev/samples
+
+https://github.com/Azure/static-web-apps/issues/457
+
+https://docs.microsoft.com/en-gb/azure/active-directory-b2c/configure-authentication-in-azure-static-app
+
+https://docs.microsoft.com/en-gb/azure/active-directory-b2c/configure-authentication-sample-angular-spa-app
+
+https://github.com/Azure-Samples/active-directory-b2c-javascript-nodejs-webapi
+
+
+##  Create an Azure Active Directory B2C tenant
+https://docs.microsoft.com/en-gb/azure/active-directory-b2c/tutorial-create-tenant
+
+---
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.0.0.
 
 ## Development server
