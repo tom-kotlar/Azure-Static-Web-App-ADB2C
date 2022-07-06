@@ -23,12 +23,12 @@
               "customOpenIdConnectProviders": {
                 "aadb2c": {
                   "registration": {
-                    "clientIdSettingName": "1c66aeaf-6dd1-4116-97dd-69ac7282eb3c",
+                    "clientIdSettingName": "AADB2C_AGB_SCOTLAND_CLIENT_ID",
                     "clientCredential": {
-                      "clientSecretSettingName": "AADB2C_PROVIDER_CLIENT_SECRET"
+                      "clientSecretSettingName": "AGB_SCOTLAND_SECRET"
                     },
                     "openIdConnectConfiguration": {
-                      "wellKnownOpenIdConfiguration": "https://agbscotland.onmicrosoft.com.b2clogin.com/agbscotland.onmicrosoft.com/B2C_1_signupsignin1/v2.0/.well-known/openid-configuration"
+                      "wellKnownOpenIdConfiguration": "https://agbscotland.b2clogin.com/agbscotland.onmicrosoft.com/B2C_1_signupsignin1/v2.0/.well-known/openid-configuration"
                     }
                   },
                   "login": {

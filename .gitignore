@@ -5,6 +5,7 @@
 /tmp
 /out-tsc
 /bazel-out
+/local.settings.json
 
 # Node
 /node_modules
