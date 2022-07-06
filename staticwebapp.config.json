@@ -1,45 +1,38 @@
 {
-    "routes": [
-        
-
-        {
-            "route": "/home",
-            "allowedRoles": ["authenticated"]
-        }, 
-        {
-            "route": "/.auth/login/done",
-            "redirect": "/home",
-            "allowedRoles": ["authenticated"],
-            "statusCode": 301
-        }
-    ],
-    "navigationFallback": {
-      "rewrite": "/index.html",
-      "exclude": ["*.{css,scss,js,png,gif,ico,jpg,svg}"]
-    }, 
-    "auth": {
-        
-            "identityProviders": {
-              "customOpenIdConnectProviders": {
-                "aadb2c": {
-                  "registration": {
-                    "clientIdSettingName": "AADB2C_AGB_SCOTLAND_CLIENT_ID",
-                    "clientCredential": {
-                      "clientSecretSettingName": "AGB_SCOTLAND_SECRET"
-                    },
-                    "openIdConnectConfiguration": {
-                      "wellKnownOpenIdConfiguration": "https://agbscotland.b2clogin.com/agbscotland.onmicrosoft.com/B2C_1_signupsignin1/v2.0/.well-known/openid-configuration"
-                    }
-                  },
-                  "login": {
-                    "nameClaimType": "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name",
-                    "scopes": [],
-                    "loginParameterNames": []
-                  }
-                }
-              }
+  "routes": [
+    {
+      "route": "/home",
+      "allowedRoles": [
+        "authenticated"
+      ]
+    }
+  ],
+  "navigationFallback": {
+    "rewrite": "/index.html",
+    "exclude": [
+      "*.{css,scss,js,png,gif,ico,jpg,svg}"
+    ]
+  },
+  "auth": {
+    "identityProviders": {
+      "customOpenIdConnectProviders": {
+        "aadb2c": {
+          "registration": {
+            "clientIdSettingName": "1c66aeaf-6dd1-4116-97dd-69ac7282eb3c",
+            "clientCredential": {
+              "clientSecretSettingName": "xxr8Q~2Bvyps15aGlkOsM4Hzs2qWHLuC_7t2tdBt"
+            },
+            "openIdConnectConfiguration": {
+              "wellKnownOpenIdConfiguration": "https://agbscotland.b2clogin.com/agbscotland.onmicrosoft.com/B2C_1_signupsignin1/v2.0/.well-known/openid-configuration"
             }
+          },
+          "login": {
+            "nameClaimType": "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name",
+            "scopes": [],
+            "loginParameterNames": []
           }
+        }
+      }
+    }
   }
-
- 
+}
