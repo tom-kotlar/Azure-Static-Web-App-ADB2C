@@ -12,7 +12,7 @@ export class LoginComponent implements OnInit {
     { provider: 'google', icon: 'bx bxl-google  bx-md', name: "Google" },
     { provider: 'twitter', icon: 'bx bxl-twitter bx-md', name: "Twitter" },
     { provider: 'facebook', icon: 'bx bxl-facebook-circle  bx-md', name: "Facebook" },
-    { provider: 'aadb2c', icon: 'bx bxl-microsoft  bx-md', name: "Microsoft" },
+    { provider: 'aad', icon: 'bx bxl-microsoft  bx-md', name: "Microsoft" },
   ];
   redirect = window.location.pathname;
 
