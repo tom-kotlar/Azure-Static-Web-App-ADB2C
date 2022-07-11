@@ -1,93 +1,12 @@
-<div class="grid">
-  <div class="col-12 md:col-6 lg:col-6">
-
-
-    <img class="hero-image" src="/assets/img/builderCrange.png" alt="Photo Seafty Checks and Builder">
-
+<div class="hero-image">
+  <div class="showcase-top">
+    <img src="./assets/img/AgbLogoCover.png" alt="agb logo"/>
   </div>
-  <div class="col-12 md:col-6 lg:col-6 align-content-center">
 
 
-    <mat-card class="flex-column justify-content-center my-6">
-
-      <form [formGroup]="loginForm">
-        <mat-form-field appearance="outline">
-          <mat-label> First name </mat-label>
-          <input matInput placeholder="First name" formControlName="firstName" required>
-          <mat-error *ngIf="loginForm.controls['firstName'].hasError('required')">
-            First name is <strong>required</strong>
-          </mat-error>
-        </mat-form-field>
-
-        <mat-form-field appearance="outline">
-          <mat-label> Last Name </mat-label>
-          <input matInput placeholder="Last Name" formControlName="lastName" required>
-          <mat-error *ngIf="loginForm.controls['lastName'].hasError('required')">
-            Last Name is <strong>required</strong>
-          </mat-error>
-        </mat-form-field>
-
-        <mat-form-field appearance="outline">
-          <mat-label> Email </mat-label>
-          <input matInput placeholder="Email" formControlName="email" required>
-          <mat-error *ngIf="loginForm.controls['email'].hasError('required')">
-            Email is <strong>required</strong>
-          </mat-error>
-
-
-        </mat-form-field>
-
-        <mat-form-field appearance="outline">
-          <mat-label> Password </mat-label>
-          <input matInput placeholder="Password" formControlName="password" required>
-          <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
-          <mat-error *ngIf="loginForm.controls['password'].hasError('required')">
-            Password is <strong>required</strong>
-          </mat-error>
-        </mat-form-field>
-
-      </form>
-
-      <button mat-raised-button color="primary">Login</button>
-
-      <mat-card-actions class="mt-5">
-        <h2 class="mat-title">Create account with</h2>
-
-        
-          <ng-container *ngFor="let provider of providers">
-            <a mat-icon-button color="warn" aria-label="icon button"
-              href="/.auth/login/{{provider.provider}}?post_login_redirect_uri=/home">
-              <i class={{provider.icon}}></i>
-            </a>
-          </ng-container>
-    
-      </mat-card-actions>
-
-    </mat-card>
-
-
+  <div class="showcase-content">
+    <h1>We Inspire, Create & Deliver</h1>
+    <p>SUB - HEADING</p>
+    <a  class="btn-xl" mat-raised-button  href="/.auth/login/aadb2c?post_login_redirect_uri=/home" color="" >LOGIN</a>
   </div>
 </div>
-
-
-<a  mat-raised-button  href="/.auth/login/aadb2c?post_login_redirect_uri=/home" color="primary">Login B2C</a>
-
-
-
-
-<!-- <nav class="menu auth">
-  <p class="menu-label">Auth</p>
-  <div class="menu-list auth">
-    <ng-container *ngIf="!userInfo; else logout">
-      <ng-container *ngFor="let provider of providers">
-        <a mat-icon-button color="warn" aria-label="icon button" href="/.auth/login/{{provider.provider}}?post_login_redirect_uri=/home">
-          <i class={{provider.icon}}></i>
-        </a>
-
-      </ng-container>
-    </ng-container>
-    <ng-template #logout>
-      <a href="/.auth/logout?post_logout_redirect_uri=/login">Logout</a>
-    </ng-template>
-  </div>
-</nav> -->
