@@ -19,6 +19,8 @@ export class HomeComponent implements OnInit {
   async ngOnInit() {
     this.userInfo = await this.getUserInfo();
     console.log(this.userInfo, "USER INFO")
+
+    await this.getGraph()
   }
 
 
@@ -31,6 +33,19 @@ export class HomeComponent implements OnInit {
       return clientPrincipal;
     } catch (error) {
       console.error('No profile could be found');
+      return undefined;
+    }
+  }
+
+  async getGraph() {
+    try {
+      const response = await fetch('https://graph.microsoft.com/v1.0/me');
+      const payload = await response.json();
+     
+      console.log(payload, "<<<----")
+      return payload;
+    } catch (error) {
+      console.error('No GRAPH could be found');
       return undefined;
     }
   }
