@@ -1,8 +1,16 @@
-<div class="" *ngIf="userInfo">
+<div class="" *ngIf="userInfo" >
     <h1>Welcome</h1>
-    <h3>User Info: {{ userInfo?.userDetails }}</h3>
-    <h3>Provider: {{ userInfo?.identityProvider }}</h3>
+    <h3>User Info: {{ userInfo.userDetails }}</h3>
+    <h3>Provider: {{ userInfo.identityProvider }}</h3>
+    <h3>User ID: {{ userInfo.userId}}</h3>
     <p></p>
+    <div *ngFor="let item of userInfo?.claims">
+     <p *ngIf="item.typ === 'jobTitle'"> Title : {{item.val}}</p>
+     <p *ngIf="item.typ === 'extension_Role'"> Role : {{item.val}}</p>
+     <p *ngIf="item.typ === 'extension_CompanyName'"> Company : {{item.val}}</p>
+     <p *ngIf="item.typ === 'extension_Mobile'"> Mobile : {{item.val}}</p>
+     <p *ngIf="item.typ === 'emails'"> Email: {{item.val}}</p>
+    </div>
 </div>
 
 <a mat-raised-button color="primary" href="/.auth/logout?post_logout_redirect_uri=/">Logout</a>

@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { Client } from "@microsoft/microsoft-graph-client";
 
 export interface UserInfo {
+  claims?: [typ: string, val: any];
   identityProvider: string;
   userId: string;
   userDetails: string;
@@ -21,6 +23,7 @@ export class HomeComponent implements OnInit {
     console.log(this.userInfo, "USER INFO")
 
     await this.getGraph()
+
   }
 
 

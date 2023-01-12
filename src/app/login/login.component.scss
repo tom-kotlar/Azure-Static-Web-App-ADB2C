@@ -1,6 +1,6 @@
 .hero-image {
   /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://media-exp1.licdn.com/dms/image/C4D1BAQHT1JKTHZ__xg/company-background_10000/0/1565356733684?e=2147483647&v=beta&t=fwmV6_R5q5oX_FztPgQxwS_P8154g2pc2PZi4BYsbus");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),  url("https://img.freepik.com/free-vector/isometric-cms-concept_23-2148807389.jpg?w=826&t=st=1673521774~exp=1673522374~hmac=4ba929605f7cdf1b82c578db1b65365889a9f53abcc87fef86008e6636feeee3");
 
   /* Set a specific height */
   height: 100vh;
@@ -10,7 +10,9 @@
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
+  
 }
+
 
 
 .showcase-top {
@@ -20,6 +22,8 @@
 }
 
 .showcase-top img {
+
+  margin-top: 50px ;
   width: 270px;
   position: absolute;
   top: 70%;
